@@ -7,7 +7,6 @@ Cinema.prototype.add = function (film) {
 };
 
 Cinema.prototype.filmTitles = function(){
-  // titles = []
   const result = this.films.map((film) =>{
     return film.title;
 
@@ -37,5 +36,22 @@ Cinema.prototype.findByYear = function(filmYear){
   return this.films.filter( (film) => {
     return film.year === filmYear;
   })
+};
+
+Cinema.prototype.findNoneByYear = function (filmYear){
+  return this.films.reduce((acc, film) => {
+
+
+
+  })
+
+
+
+  // if (this.findByYear(filmYear) === []){
+  //   return `No movies for ${filmYear}`
+  // } 
+  // return;
+  //If findByYear = [] 
+  // say that "no movies for this year"
 }
 module.exports = Cinema;
